@@ -23,8 +23,6 @@ The app searches for free slots on the driving test.
 
 **Start both the front end and back end**:
 
-    ```bash
     npm start
-    ```
 
     This will concurrently run `npm start` in the `/client` directory for the front end and `node script.mjs` in the `/server` directory for the back end.
