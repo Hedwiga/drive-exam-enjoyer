@@ -4,31 +4,25 @@ The app searches for free slots on the driving test.
 
 ## Prerequisites
 
-- Node.js
-- npm
+- Node.js 18.16.0
+- npm 9.5.1
 - Git
 
 ## Installation
 
 **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
-    ```
+    git clone https://github.com/Hedwiga/drive-exam-enjoyer.git
+    cd drive-exam-enjoyer
 
 **Install all dependencies**:
 
-    ```bash
     npm run install-all
-    ```
 
 ## Running the Application
 
 **Start both the front end and back end**:
 
-    ```bash
     npm start
-    ```
 
     This will concurrently run `npm start` in the `/client` directory for the front end and `node script.mjs` in the `/server` directory for the back end.
