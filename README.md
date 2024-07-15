@@ -12,16 +12,12 @@ The app searches for free slots on the driving test.
 
 **Clone the repository**:
 
-    ```bash
     git clone https://github.com/your-username/your-repo.git
     cd your-repo
-    ```
 
 **Install all dependencies**:
 
-    ```bash
     npm run install-all
-    ```
 
 ## Running the Application
 
