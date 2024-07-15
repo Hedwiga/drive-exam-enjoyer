@@ -4,8 +4,8 @@ The app searches for free slots on the driving test.
 
 ## Prerequisites
 
-- Node.js
-- npm
+- Node.js 18.16.0
+- npm 9.5.1
 - Git
 
 ## Installation
