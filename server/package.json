@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "drive-exam-enjoyer": "file:..",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2"
+  }
+}

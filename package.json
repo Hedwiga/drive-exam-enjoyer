@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "name": "drive-exam-enjoyer",
+  "version": "1.0.0",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server",
+    "start": "concurrently \"npm start --prefix client\" \"node server/script.mjs\""
+  }
+}
