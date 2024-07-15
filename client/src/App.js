@@ -163,6 +163,7 @@ export const App = () => {
       setIsError(false);
 
       // Start search
+      setFreeSlots([]);
       setSearchStatus("search");
       tryGetFreeSlots();
 
@@ -240,11 +241,14 @@ export const App = () => {
             </Center>
           ) : (
             <>
+            {Object.keys(freeSlots).length === 0 && <>
               <FreeSlotsSkeleton freeSlots={freeSlots} />
               <FreeSlotsSkeleton freeSlots={freeSlots} />
               <FreeSlotsSkeleton freeSlots={freeSlots} />
               <FreeSlotsSkeleton freeSlots={freeSlots} />
-              <Container overflowY="scroll" padding={0}>
+              </>
+            }
+              <Container overflowY="scroll" maxHeight='90vh' padding={0}>
                 {Object.keys(freeSlots).map((day) => {
                   return (
                     <VStack align="start" spacing={4}>
@@ -255,7 +259,7 @@ export const App = () => {
                       <Wrap>
                         {freeSlots[day].map(({ chtime }) => {
                           return (
-                            <Card backgroundColor="lightgreen">
+                            <Card backgroundColor="#48BB78">
                               <CardBody>
                                 <Text>{chtime}</Text>
                               </CardBody>
