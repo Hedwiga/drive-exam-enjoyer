@@ -12,8 +12,8 @@ The app searches for free slots on the driving test.
 
 **Clone the repository**:
 
-    git clone https://github.com/your-username/your-repo.git
-    cd your-repo
+    git clone https://github.com/Hedwiga/drive-exam-enjoyer.git
+    cd drive-exam-enjoyer
 
 **Install all dependencies**:
 
