@@ -251,7 +251,7 @@ export const App = () => {
               <Container overflowY="scroll" maxHeight='90vh' padding={0}>
                 {Object.keys(freeSlots).map((day) => {
                   return (
-                    <VStack align="start" spacing={4}>
+                    <VStack key={`slots-day-${day}`} align="start" spacing={4}>
                       <br />
                       <Heading as="h5" size="sm">
                         {day}
@@ -259,7 +259,7 @@ export const App = () => {
                       <Wrap>
                         {freeSlots[day].map(({ chtime }) => {
                           return (
-                            <Card backgroundColor="#48BB78">
+                            <Card key={`slot-${day-chtime}`} backgroundColor="#48BB78">
                               <CardBody>
                                 <Text>{chtime}</Text>
                               </CardBody>
