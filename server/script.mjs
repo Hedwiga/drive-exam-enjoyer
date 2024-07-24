@@ -51,7 +51,7 @@ app.get("/freeSlots", async (req, res, next) => {
   try {
     for (let date = 0; date < dates.length; date++) {
       const dayFreeSlots = await getFreeSlots({
-        id,
+        id: parseInt(id),
         date: dates[date],
         cookie,
         token,
