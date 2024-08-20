@@ -4,6 +4,8 @@ import cors from "cors";
 const app = express();
 const PORT = 5000;
 
+const QUESTION_ID = 60;
+
 import { requestAPI } from "./requestAPI.mjs";
 import { APIconfig } from "./APIconfig.mjs";
 
@@ -20,14 +22,14 @@ const getFreeSlots = async ({ id, date, cookie, token }) => {
   APIconfig.freeSlots.options.headers.set("X-CSRF-Token", token);
   APIconfig.freeSlots.options.headers.set(
     "Referer",
-    `https://eq.hsc.gov.ua/site/step2?chdate=${date}&question_id=55&id_es=`
+    `https://eq.hsc.gov.ua/site/step2?chdate=${date}&question_id=${QUESTION_ID}&id_es=`
   );
 
   const freeSlots = await requestAPI({
     url: APIconfig.freeSlots.url,
     options: {
       ...APIconfig.freeSlots.options,
-      body: `office_id=${id}&date_of_admission=${date}&question_id=55&es_date=&es_time=`,
+      body: `office_id=${id}&date_of_admission=${date}&question_id=${QUESTION_ID}`,
     },
   });
   return freeSlots;
